@@ -68,7 +68,7 @@ export const Payslip: React.FC<PropData> = ({ employeeData }) => {
               className="text-[#00b0f0] underline"
               
             >
-              www.ienetworksolutions.com
+              {employeeData.CompanyInformation.CompanyWebsite}
             </Link>
             <p className="text-right">Festival 22, 7th floor</p>
             <p className="text-right">Addis Ababa, Ethiopia</p>
@@ -84,7 +84,7 @@ export const Payslip: React.FC<PropData> = ({ employeeData }) => {
               [
                 {
                   title: "Company Name:",
-                  data: "IE Network Solutions PLC",
+                  data: `${employeeData.CompanyInformation.companyName}`,
                   span: 4,
                   classname: " ",
                 },
@@ -96,7 +96,7 @@ export const Payslip: React.FC<PropData> = ({ employeeData }) => {
                 },
                 {
                   title: "Date Hired:",
-                  data: `Mar 4, 2023`,
+                  data: `${employeeData.hiredDate}`,
                   span: 4,
                   classname: "",
                 },
@@ -104,20 +104,20 @@ export const Payslip: React.FC<PropData> = ({ employeeData }) => {
               [
                 {
                   title: "Salary Period:",
-                  data: "30 days",
+                  data: `${employeeData.jobInformation.payPeriod}`,
                   span: 4,
                   classname: "",
                 },
                 { title: "TIN:", data: "75894565", span: 4, classname: "" },
                 {
                   title: "Location:",
-                  data: "HQ- Addis Ababa",
+                  data:`${employeeData.CompanyInformation.Location}`,
                   span: 3,
                   classname: "",
                 },
                 {
                   title: "Pay Date",
-                  data: "feb 8, 2025",
+                  data: `${employeeData.jobInformation.payDate}`,
                   span: 3,
                   classname: "",
                 },

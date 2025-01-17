@@ -3,8 +3,11 @@ import { Payslip } from "../ui/payslip";
 interface employeeData {
     id: string;
     name: string;
+    hiredDate: Date;
+    TIN: number;
     bonus: bonus;
     jobInformation: jobInformation;
+    CompanyInformation:CompanyInformation;
   }
   
   interface bonus {
@@ -29,6 +32,17 @@ interface employeeData {
     salary: bigint;
     position: string;
     basic: bigint;
+    payPeriod:number;
+    payDate:Date;
+
+
+  }
+
+  interface CompanyInformation {
+    CompanyWebsite: string;
+    companyName: string;
+    Address: string;
+    Location: string;
     
   }
   
@@ -42,6 +56,9 @@ interface employeeData {
   const employeeDataCopy: employeeData = {
     id: "e12345",
     name: "John Doe",
+    hiredDate:new Date("2023-01-15"),
+    TIN: 74513889,
+  
     bonus: {
       id: "b001",
       name: "Yearly Bonus",
@@ -63,7 +80,15 @@ interface employeeData {
       salary: BigInt(120000),
       basic:BigInt(50000),
       position: "Software Engineer",
+      payPeriod:30,
+    payDate: new Date("2023-01-15")
     },
+    CompanyInformation: {
+      CompanyWebsite: "www.ienetworksolutions.com",
+      companyName: "IE Networks",
+      Address: "Festival 22, 7th floor",
+      Location: "Addis Ababa, Ethiopia",
+    }
   };
 
 
