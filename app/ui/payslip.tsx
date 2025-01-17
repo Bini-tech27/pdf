@@ -58,7 +58,7 @@ export const Payslip: React.FC<PropData> = ({ employeeData }) => {
           <Image src={logo} alt="" className="w-24 " />
           <header className="text-center self-end  pb-4">
           <h1 className="text-2xl font-bold ">
-            Pay Slip for the Month of Dec, 2024
+            Pay Slip for the Month of {dayjs(employeeData.hiredDate).format("MMMM ")}
           </h1>
         </header>
           <div>
