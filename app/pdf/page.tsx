@@ -1,9 +1,10 @@
+import dayjs from "dayjs";
 import { Payslip } from "../ui/payslip";
 
 interface employeeData {
     id: string;
     name: string;
-    hiredDate: Date;
+    hiredDate: Date | string  ;  
     TIN: number;
     bonus: bonus;
     jobInformation: jobInformation;
@@ -33,7 +34,7 @@ interface employeeData {
     position: string;
     basic: bigint;
     payPeriod:number;
-    payDate:Date;
+    payDate:Date | string;
 
 
   }
@@ -56,9 +57,8 @@ interface employeeData {
   const employeeDataCopy: employeeData = {
     id: "e12345",
     name: "John Doe",
-    hiredDate:new Date("2023-01-15"),
+    hiredDate:"2022-12-15T00:00:00.000Z",
     TIN: 74513889,
-  
     bonus: {
       id: "b001",
       name: "Yearly Bonus",
@@ -81,7 +81,7 @@ interface employeeData {
       basic:BigInt(50000),
       position: "Software Engineer",
       payPeriod:30,
-    payDate: new Date("2023-01-15")
+    payDate: "2022-12-15T00:00:00.000Z"
     },
     CompanyInformation: {
       CompanyWebsite: "www.ienetworksolutions.com",

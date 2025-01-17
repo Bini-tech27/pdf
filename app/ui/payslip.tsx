@@ -8,6 +8,7 @@ import Link from "next/link";
 import logo from "../../public/logos.png";
 import stamp from "../../public/stamp.png";
 import Image from "next/image";
+import dayjs from "dayjs";
 
 export const Payslip: React.FC<PropData> = ({ employeeData }) => {
   const payslipRef = useRef<HTMLDivElement>(null);
@@ -96,7 +97,7 @@ export const Payslip: React.FC<PropData> = ({ employeeData }) => {
                 },
                 {
                   title: "Date Hired:",
-                  data: `${employeeData.hiredDate}`,
+                  data: `${dayjs(employeeData.hiredDate).format("YYYY-MM-DD")}`,
                   span: 4,
                   classname: "",
                 },
@@ -116,8 +117,8 @@ export const Payslip: React.FC<PropData> = ({ employeeData }) => {
                   classname: "",
                 },
                 {
-                  title: "Pay Date",
-                  data: `${employeeData.jobInformation.payDate}`,
+                  title: "Pay Date:",
+                  data: `${dayjs(employeeData.hiredDate).format("YYYY-MM-DD")}`,
                   span: 3,
                   classname: "",
                 },
