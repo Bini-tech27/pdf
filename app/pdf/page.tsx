@@ -50,9 +50,7 @@ interface employeeData {
   export interface PropData {
     employeeData: employeeData;
   }
-  export interface tableFormat {
-    trows: {data:string,text:string,span:number,isheader:boolean}[][][];
-  }
+  
   
   const employeeDataCopy: employeeData = {
     id: "e12345",
@@ -92,9 +90,7 @@ interface employeeData {
   };
 
 
-  const ourData :tableFormat={
-    trows:[[[{data:'Employee Information',text:'Employee Information',span:12,isheader:true}]],[[{data:'Tinsae MEsfin ',text:'Full Name',span:4,isheader:false}],[{data:'1000032132131 ',text:'Tin Number',span:4,isheader:false}],[{data:'332478942 ',text:'Pension Id',span:4,isheader:false}]]]
-  }
+  
   
 export default function Page() {
   return (

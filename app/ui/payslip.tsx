@@ -1,5 +1,5 @@
 "use client";
-import { PropData, tableFormat } from "../pdf/page";
+import { PropData } from "../pdf/page";
 import html2canvas from "html2canvas";
 import jsPDF from "jspdf";
 import React, { useRef } from "react";
